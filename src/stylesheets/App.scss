@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,400;0,700;1,700&display=swap');
+@import 'reset/reset';
+
+/* core */
+@import 'core/variables';
+@import 'core/mixins';
+@import 'core/functions';
+
+/* elements */
+@import 'design/ProductList';
+@import 'design/ProductCard';
+@import 'design/common/Modal';
+@import 'design/common/Header';

@@ -1,0 +1,7 @@
+.header {
+  padding: 24px;
+  @include media($tablet) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
