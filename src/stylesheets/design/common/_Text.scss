@@ -2,5 +2,13 @@
   &--productList {
     font-size: rem(18);
     font-weight: 300;
+    height: 42px;
+    overflow: hidden;
+    display: block;
+    display: -webkit-box;
+    max-width: 100%;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
   }
 }
