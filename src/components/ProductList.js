@@ -1,16 +1,21 @@
 import React from 'react';
-import ProductMiniature from './ProductMiniature';
+import ProductCard from './ProductCard';
 
-const ProductList = ({ products }) => {
+const ProductList = (props) => {
+  const { products, updateCart } = props;
+
   const productList = products.map((product, i) => {
-    return <ProductMiniature key={i} product={product} {...product} />;
+    return (
+      <ProductCard
+        updateCart={updateCart}
+        key={i}
+        product={product}
+        inProductList={true}
+      />
+    );
   });
 
-  return (
-    <main className="main">
-      <ul className="list">{productList}</ul>
-    </main>
-  );
+  return <ul className="list">{productList}</ul>;
 };
 
 export default ProductList;

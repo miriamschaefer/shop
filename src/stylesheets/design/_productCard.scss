@@ -1,13 +1,36 @@
 .product-card {
-  border: 2px solid blue;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 
-  &__img {
-    & img {
+  &__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    &__img {
       width: 150px;
+      height: 150px;
+      display: block;
+      border: 2px solid red;
+      position: relative;
+
+      & img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+
+    &__title {
+      display: block; /* or inline-block */
+      text-overflow: ellipsis;
+      word-wrap: break-word;
+      overflow: hidden;
+      max-height: 3em;
     }
   }
 }

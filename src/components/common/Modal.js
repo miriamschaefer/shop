@@ -1,26 +1,30 @@
 import React from 'react';
+import Cart from '../Cart';
+import ProductCard from '../ProductCard';
 
-const Modal = (props) => {
-  const { id, description, image, price, title } = props.product;
-  const { show } = props;
+const Modal = ({
+  product,
+  show,
+  onClose,
+  cartItems,
+  updateCart,
+  modalType,
+}) => {
   if (!show) return null;
 
   return (
-    <div onClick={props.onClose} className="modal">
-      <div className="modal__content">
+    <div onClick={onClose} className="modal">
+      <div onClick={(e) => e.stopPropagation} className="modal__content">
         <div className="modal__content__body">
-          <img src={image} />
-          <span>
-            <h2>{title}</h2>
-            <p>{description}</p>
-          </span>
+          {modalType === 'cart' && (
+            <Cart updateCart={updateCart} cartItems={cartItems} />
+          )}
 
-          <div>
-            <p>{price}</p>
-            boton
-          </div>
+          {modalType === 'product' && (
+            <ProductCard updateCart={updateCart} product={product} />
+          )}
         </div>
-        <div onClick={props.onClose} className="modal__content__close">
+        <div onClick={onClose} className="modal__content__close">
           Cerrar
         </div>
       </div>

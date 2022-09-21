@@ -1,0 +1,18 @@
+.header {
+  padding: 24px;
+  text-align: center;
+
+  @include media($tablet) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__logo {
+    max-width: 350px;
+
+    & img {
+      width: 100%;
+    }
+  }
+}

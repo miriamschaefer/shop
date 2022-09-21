@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,400;0,700;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap');
+
 @import 'reset/reset';
 
 /* core */
@@ -7,7 +8,13 @@
 @import 'core/functions';
 
 /* elements */
+
 @import 'design/ProductList';
 @import 'design/ProductCard';
 @import 'design/common/Modal';
-@import 'design/common/Header';
+@import 'design/common/Nav';
+@import 'design/common/Chip';
+@import 'design/common/Text';
+@import 'design/common/Button';
+@import 'design/layout/Main';
+@import 'design/layout/Header';
