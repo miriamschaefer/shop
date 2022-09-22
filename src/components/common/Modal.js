@@ -2,10 +2,12 @@ import React from 'react';
 import Cart from '../Cart';
 import ProductCard from '../ProductCard';
 import CloseIcon from '../../media/icons/close.png';
+import Title from './Title';
 
 const Modal = ({
   product,
   show,
+  title,
   onClose,
   cartItems,
   updateCart,
@@ -17,6 +19,8 @@ const Modal = ({
   return (
     <div onClick={onClose} className="modal">
       <div onClick={(e) => e.stopPropagation} className="modal__content">
+        {title && <Title title={title} classType={'modal'} />}
+
         <div className="modal__content__body">
           {modalType === 'cart' && (
             <Cart

@@ -1,5 +1,8 @@
 .nav {
   &__item {
+    display: flex;
+    align-items: baseline;
+
     &--light {
       color: $text-light;
     }

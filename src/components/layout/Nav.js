@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { MODAL_CART } from '../../common/models';
 import Modal from '../common/Modal';
+import Title from '../common/Title';
 
 const Nav = ({ cartItems, updateCart }) => {
   const [show, setShow] = useState(false);
@@ -14,7 +15,7 @@ const Nav = ({ cartItems, updateCart }) => {
     <>
       <nav onClick={() => setShow(true)} className="nav">
         <p className="nav__item">
-          Cart{' '}
+          <Title title={'Cart'} classType={'cart'} />
           <span className="nav__item nav__item--light">
             ({totalProducts} {totalProducts === 1 ? 'item' : 'items'})
           </span>
@@ -26,6 +27,7 @@ const Nav = ({ cartItems, updateCart }) => {
         cartItems={cartItems}
         updateCart={updateCart}
         modalType={MODAL_CART}
+        title={'Carrito'}
       />
     </>
   );

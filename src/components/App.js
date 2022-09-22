@@ -43,7 +43,7 @@ function App() {
 
   return (
     <>
-      <Header cartItems={cartItems} title={'Patata'} updateCart={updateCart} />
+      <Header cartItems={cartItems} updateCart={updateCart} />
       <main className="main">
         <ProductList
           updateCart={updateCart}

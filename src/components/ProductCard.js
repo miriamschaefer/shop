@@ -3,6 +3,8 @@ import Modal from './common/Modal';
 import Chip from './common/Chip';
 import Button from './common/Button';
 import { ACTIONS_ADD, ACTIONS_REMOVE, MODAL_PRODUCT } from '../common/models';
+import Title from './common/Title';
+import Price from './common/Price';
 
 const ProductCard = ({
   product,
@@ -24,13 +26,13 @@ const ProductCard = ({
       <li
         className={`product-card ${id === 1 ? 'featured' : ''}
         ${inProductList ? 'zoom-in' : ''} ${
-          !inProductList && isInCart ? 'product-card--modal' : ''
+          !inProductList && !cartModal ? 'product-card--modal' : ''
         } ${isInCart ? 'product-card--card' : ''}`}
       >
         <div
           onClick={() => setShow(true)}
           className={`product-card__info ${
-            !inProductList && isInCart ? 'product-card__info--modal' : ''
+            !inProductList && !cartModal ? 'product-card__info--modal' : ''
           }`}
         >
           <div
@@ -46,7 +48,11 @@ const ProductCard = ({
               !inProductList && !cartModal ? 'product-card__description' : ''
             }`}
           >
-            <h2 className="title title--productList">{title}</h2>
+            <Title
+              title={title}
+              classType={inProductList ? 'productList' : 'product'}
+            />
+
             {!inProductList && !cartModal && (
               <p class="description">{description}</p>
             )}
@@ -55,10 +61,10 @@ const ProductCard = ({
 
         <div
           className={`product-card__actions ${
-            !inProductList && isInCart ? 'product-card__actions--modal' : ''
+            !inProductList && !cartModal ? 'product-card__actions--modal' : ''
           }`}
         >
-          <span className="price">{price}€</span>
+          <Price price={price} currency={'€'} />
 
           <div className="product-card__actions__buttons">
             {!cartModal && (
