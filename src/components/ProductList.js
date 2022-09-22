@@ -1,9 +1,7 @@
 import React from 'react';
 import ProductCard from './ProductCard';
 
-const ProductList = (props) => {
-  const { products, updateCart } = props;
-
+const ProductList = ({ products, updateCart, cartItems }) => {
   const productList = products.map((product, i) => {
     return (
       <ProductCard
@@ -11,6 +9,7 @@ const ProductList = (props) => {
         key={i}
         product={product}
         inProductList={true}
+        cartItems={cartItems}
       />
     );
   });

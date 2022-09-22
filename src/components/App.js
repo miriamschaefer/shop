@@ -3,16 +3,16 @@ import React, { useState } from 'react';
 import ProductList from './ProductList';
 import { useFetchProducts } from '../hooks/Hooks.js';
 import Header from './layout/Header';
+import { ACTIONS_ADD, ACTIONS_REMOVE } from '../common/models';
 
 function App() {
   const { products } = useFetchProducts();
   const [cartItems, setCartItems] = useState([]);
 
   const updateCart = (product, action) => {
-    console.log(product);
     const elementInCart = cartItems.find((el) => el.id === product.id);
 
-    if (action === 'add') {
+    if (action === ACTIONS_ADD) {
       if (elementInCart) {
         setCartItems(
           cartItems.map((el) =>
@@ -26,7 +26,7 @@ function App() {
       }
     }
 
-    if (action === 'remove') {
+    if (action === ACTIONS_REMOVE) {
       if (elementInCart.quantity === 1) {
         setCartItems(cartItems.filter((el) => el.id !== product.id));
       } else {

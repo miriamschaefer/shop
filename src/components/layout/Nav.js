@@ -1,8 +1,14 @@
 import React, { useState } from 'react';
+import { MODAL_CART } from '../../common/models';
 import Modal from '../common/Modal';
 
 const Nav = ({ cartItems, updateCart }) => {
   const [show, setShow] = useState(false);
+  let totalProducts = 0;
+
+  cartItems.forEach((item) => {
+    totalProducts += item.quantity;
+  });
 
   return (
     <>
@@ -10,7 +16,7 @@ const Nav = ({ cartItems, updateCart }) => {
         <p className="nav__item">
           Cart{' '}
           <span className="nav__item nav__item--light">
-            ({cartItems.length} items)
+            ({totalProducts} {totalProducts === 1 ? 'item' : 'items'})
           </span>
         </p>
       </nav>
@@ -19,7 +25,7 @@ const Nav = ({ cartItems, updateCart }) => {
         show={show}
         cartItems={cartItems}
         updateCart={updateCart}
-        modalType={'cart'}
+        modalType={MODAL_CART}
       />
     </>
   );
