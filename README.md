@@ -4,7 +4,7 @@
 
 El principal objetivo de este ejercicio consiste en renderizar una categoría de una tienda online siguiendo un diseño pautado, e implementar la lógica del carrito en React sin ningún framework de CSS.
 
-[<img alt="alt_text" width="40px" src="https://imgur.com/a/TAJxvh4" />](https://imgur.com/a/TAJxvh4)
+![alt text](https://imgur.com/a/TAJxvh4 'Shop App')
 
 ## Primer paso
 
