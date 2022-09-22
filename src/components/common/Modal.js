@@ -1,6 +1,7 @@
 import React from 'react';
 import Cart from '../Cart';
 import ProductCard from '../ProductCard';
+import CloseIcon from '../../media/icons/close.png';
 
 const Modal = ({
   product,
@@ -34,7 +35,7 @@ const Modal = ({
           )}
         </div>
         <div onClick={onClose} className="modal__content__close">
-          Cerrar
+          <img src={CloseIcon} />
         </div>
       </div>
     </div>

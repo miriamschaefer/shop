@@ -1,6 +1,6 @@
 .button {
-  width: 150px;
   height: 32px;
+  width: 120px;
   background-color: $color-dark;
   padding: 8px;
   color: $color-light;
@@ -8,6 +8,15 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: rem(20);
+  font-size: rem(14);
   font-weight: 300;
+  margin-right: 8px;
+
+  &--red {
+    background-color: $color-accent-500;
+  }
+
+  &:hover {
+    opacity: 0.9;
+  }
 }

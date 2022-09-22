@@ -12,8 +12,10 @@
   justify-content: center;
 
   &__content {
-    width: 500px;
-    background-color: white;
+    min-width: 500px;
+    max-width: 700px;
+    max-height: 600px;
+    background-color: $color-light;
     padding: 24px;
     position: relative;
 
@@ -41,9 +43,19 @@
     }
 
     &__close {
+      margin: 8px;
       position: absolute;
       right: 0;
       top: 0;
+      width: 24px;
+      height: 24px;
+      & img {
+        width: 100%;
+      }
+
+      &:hover {
+        cursor: pointer;
+      }
     }
   }
 }

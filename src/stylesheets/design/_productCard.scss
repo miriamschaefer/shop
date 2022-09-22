@@ -4,6 +4,11 @@
   justify-content: center;
   align-items: center;
 
+  &--modal {
+    align-items: end;
+    margin-right: 0;
+  }
+
   &__info {
     display: flex;
     flex-direction: column;
@@ -23,6 +28,14 @@
         object-fit: contain;
       }
     }
+
+    &--modal {
+      flex-direction: row;
+    }
+  }
+
+  &__description {
+    width: 60%;
   }
 
   &__actions {
@@ -30,6 +43,15 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    &__buttons {
+      display: flex;
+    }
+
+    &--modal {
+      width: 60%;
+      right: 0;
+    }
   }
 
   &__price {

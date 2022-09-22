@@ -9,15 +9,16 @@ const Cart = ({ cartItems, updateCart, isInCart }) => {
         product={item}
         updateCart={updateCart}
         isInCart={isInCart}
+        cartModal={true}
       />
     );
   });
 
   return (
-    <>
-      {cartItems.length === 0 && <div>No productos</div>}
-      {cartItems.length !== 0 && <div>{cartItemsInList}</div>}
-    </>
+    <ul className="cart">
+      {cartItems.length === 0 && <div>No tienes productos en el carrito</div>}
+      {cartItems.length !== 0 && <>{cartItemsInList}</>}
+    </ul>
   );
 };
 

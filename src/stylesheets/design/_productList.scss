@@ -1,8 +1,8 @@
 .list {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
-  grid-column-gap: 24px;
-  grid-row-gap: 24px;
+  grid-column-gap: 36px;
+  grid-row-gap: 36px;
   grid-auto-flow: dense;
 }
 

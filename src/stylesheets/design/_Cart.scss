@@ -1,0 +1,16 @@
+.cart {
+  display: flex;
+  flex-wrap: wrap;
+  overflow-y: scroll !important;
+  max-height: 600px;
+
+  & .product-card {
+    width: 175px;
+    margin: 24px;
+    overflow: hidden;
+
+    & img {
+      width: 100%;
+    }
+  }
+}
