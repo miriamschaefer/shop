@@ -4,8 +4,6 @@
 
 El principal objetivo de este ejercicio consiste en renderizar una categoría de una tienda online siguiendo un diseño pautado, e implementar la lógica del carrito en React sin ningún framework de CSS.
 
-![alt text](https://imgur.com/a/TAJxvh4 'Shop App')
-
 ## Primer paso
 
 El primer paso que realicé fue la llamada a la API y la creación de un Hook que setease en el estado mis productos.
