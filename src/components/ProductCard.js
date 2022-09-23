@@ -50,7 +50,9 @@ const ProductCard = ({
           >
             <Title
               title={title}
-              classType={inProductList ? 'productList' : 'product'}
+              classType={
+                cartModal ? 'cart' : inProductList ? 'productList' : 'product'
+              }
             />
 
             {!inProductList && !cartModal && (

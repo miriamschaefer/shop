@@ -15,7 +15,7 @@ const Nav = ({ cartItems, updateCart }) => {
     <>
       <nav onClick={() => setShow(true)} className="nav">
         <p className="nav__item">
-          <Title title={'Cart'} classType={'cart'} />
+          <Title title={'Cart'} classType={'nav'} />
           <span className="nav__item nav__item--light">
             ({totalProducts} {totalProducts === 1 ? 'item' : 'items'})
           </span>
